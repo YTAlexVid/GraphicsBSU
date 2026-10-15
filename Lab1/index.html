@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color models</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="convertFunctions.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+<h1>RGB / CMYK / HSV</h1>
+<div id="preview"></div>
+<div id="models">
+    <fieldset id="rgb">
+        <legend>RGB</legend>
+        <div class="row">R <input type="text" id="r"> <input type="range" id="r-range" min="0" max="255"></div>
+        <div class="row">G <input type="text" id="g"> <input type="range" id="g-range" min="0" max="255"></div>
+        <div class="row">B <input type="text" id="b"> <input type="range" id="b-range" min="0" max="255"></div>
+        <p class="error"></p>
+        <input type="color" id="rgb-palette">
+    </fieldset>
+    <fieldset id="cmyk">
+        <legend>CMYK</legend>
+        <div class="row">C <input type="text" id="c"> <input type="range" id="c-range" min="0" max="100"></div>
+        <div class="row">M <input type="text" id="m"> <input type="range" id="m-range" min="0" max="100"></div>
+        <div class="row">Y <input type="text" id="y"> <input type="range" id="y-range" min="0" max="100"></div>
+        <div class="row">K <input type="text" id="k"> <input type="range" id="k-range" min="0" max="100"></div>
+        <p class="error"></p>
+        <canvas id="cmyk-palette" width="100" height="100"></canvas>
+    </fieldset>
+    <fieldset id="hsv">
+        <legend>HSV</legend>
+        <div class="row">H <input type="text" id="h"> <input type="range" id="h-range" min="0" max="360"></div>
+        <div class="row">S <input type="text" id="s"> <input type="range" id="s-range" min="0" max="100"></div>
+        <div class="row">V <input type="text" id="v"> <input type="range" id="v-range" min="0" max="100"></div>
+        <p class="error"></p>
+        <canvas id="hsv-palette" width="100" height="100"></canvas>
+    </fieldset>
+</div>
+</body>
+</html>
